@@ -1,0 +1,79 @@
+{
+  "disclaimer": "Demo dataset: amounts and income limits are approximate. Always verify on the official portal before applying.",
+  "schemes": [
+    {
+      "id": "pm-kisan", "name": "PM-KISAN Samman Nidhi", "name_hi": "पीएम-किसान सम्मान निधि",
+      "benefit": "Rs 6,000 per year in 3 instalments for farmer families",
+      "rules": {"occupations": ["farmer"]},
+      "documents": ["Aadhaar card", "Land ownership records", "Bank passbook (Aadhaar-linked)", "Mobile number"],
+      "office": "Common Service Centre (CSC) / Agriculture Department", "link": "https://pmkisan.gov.in"
+    },
+    {
+      "id": "pm-jay", "name": "Ayushman Bharat PM-JAY", "name_hi": "आयुष्मान भारत पीएम-जेएवाई",
+      "benefit": "Health cover up to Rs 5 lakh per family per year",
+      "approx": true,
+      "rules": {"max_income": 250000, "income_waiver_age": 70},
+      "documents": ["Aadhaar card", "Ration card", "Income proof / SECC family details", "Mobile number"],
+      "office": "Empanelled hospital Ayushman Mitra / CSC", "link": "https://pmjay.gov.in"
+    },
+    {
+      "id": "pmay", "name": "PM Awas Yojana", "name_hi": "प्रधानमंत्री आवास योजना",
+      "benefit": "Subsidy / assistance for building or buying a first pucca house",
+      "approx": true,
+      "rules": {"max_income": 1800000, "requires": {"owns_pucca_house": false}},
+      "documents": ["Aadhaar card", "Income certificate", "Bank passbook", "Land/property papers", "Passport size photo"],
+      "office": "Urban Local Body / Gram Panchayat / CSC", "link": "https://pmaymis.gov.in"
+    },
+    {
+      "id": "apy", "name": "Atal Pension Yojana", "name_hi": "अटल पेंशन योजना",
+      "benefit": "Guaranteed monthly pension of Rs 1,000 to Rs 5,000 after age 60",
+      "rules": {"min_age": 18, "max_age": 40, "requires": {"has_bank_account": true}},
+      "documents": ["Aadhaar card", "Bank account / savings passbook", "Mobile number"],
+      "office": "Your bank branch", "link": "https://www.npstrust.org.in"
+    },
+    {
+      "id": "pmmvy", "name": "PM Matru Vandana Yojana", "name_hi": "प्रधानमंत्री मातृ वंदना योजना",
+      "benefit": "Rs 5,000 in instalments for pregnant / lactating mothers (first child)",
+      "rules": {"gender": "female", "requires": {"is_pregnant": true}},
+      "documents": ["Aadhaar card", "MCP (Mother-Child Protection) card", "Bank passbook", "Pregnancy registration proof"],
+      "office": "Anganwadi centre / ASHA worker", "link": "https://pmmvy.wcd.gov.in"
+    },
+    {
+      "id": "post-matric-sc", "name": "Post-Matric Scholarship for SC students", "name_hi": "पोस्ट-मैट्रिक छात्रवृत्ति (अनुसूचित जाति)",
+      "benefit": "Fee reimbursement and maintenance allowance for SC students after Class 10",
+      "approx": true,
+      "rules": {"occupations": ["student"], "categories": ["SC"], "max_income": 250000},
+      "documents": ["Aadhaar card", "Caste certificate", "Income certificate", "Marksheets", "Bank passbook", "Admission/fee receipt"],
+      "office": "College scholarship cell / National Scholarship Portal", "link": "https://scholarships.gov.in"
+    },
+    {
+      "id": "pmjdy", "name": "PM Jan Dhan Yojana", "name_hi": "प्रधानमंत्री जन धन योजना",
+      "benefit": "Zero-balance bank account with RuPay card and accident insurance",
+      "rules": {"min_age": 10, "requires": {"has_bank_account": false}},
+      "documents": ["Aadhaar card (or other officially valid ID)", "Passport size photo"],
+      "office": "Any bank branch / Bank Mitra", "link": "https://pmjdy.gov.in"
+    },
+    {
+      "id": "mudra", "name": "PM Mudra Yojana", "name_hi": "प्रधानमंत्री मुद्रा योजना",
+      "benefit": "Collateral-free loans up to Rs 10 lakh for small businesses",
+      "rules": {"min_age": 18, "occupations": ["self_employed", "street_vendor"]},
+      "documents": ["Aadhaar card", "PAN card", "Business proof / plan", "Bank statement", "Address proof"],
+      "office": "Bank / NBFC / MFI", "link": "https://www.mudra.org.in"
+    },
+    {
+      "id": "pmuy", "name": "PM Ujjwala Yojana", "name_hi": "प्रधानमंत्री उज्ज्वला योजना",
+      "benefit": "Free LPG connection for women from poor households",
+      "approx": true,
+      "rules": {"gender": "female", "min_age": 18, "max_income": 200000, "requires": {"has_lpg": false}},
+      "documents": ["Aadhaar card", "Ration card / BPL proof", "Bank passbook", "Passport size photo"],
+      "office": "Nearest LPG distributor", "link": "https://www.pmuy.gov.in"
+    },
+    {
+      "id": "pm-svanidhi", "name": "PM SVANidhi", "name_hi": "पीएम स्वनिधि",
+      "benefit": "Working-capital loan for street vendors, starting at Rs 10,000",
+      "rules": {"occupations": ["street_vendor"]},
+      "documents": ["Aadhaar card", "Vendor certificate / letter of recommendation", "Bank passbook", "Mobile number"],
+      "office": "Urban Local Body / CSC", "link": "https://pmsvanidhi.mohua.gov.in"
+    }
+  ]
+}

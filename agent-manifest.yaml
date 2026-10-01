@@ -1,0 +1,24 @@
+# NOTE: Fields below are a PLACEHOLDER. Adjust names/keys to match the
+# official aiKart Agent Manifest Guide (PDF) before submitting via Method 1.
+name: yojana-saathi
+version: 1.0.0
+description: >
+  AI agent that finds government schemes a citizen is eligible for,
+  lists required documents, finds the nearest centre and drafts
+  application / grievance letters. Hindi, Hinglish and English.
+category: Citizen & GovTech
+runtime:
+  type: docker
+  dockerfile: Dockerfile
+  port: 8000
+endpoints:
+  chat: POST /chat
+  health: GET /health
+env:
+  - ANTHROPIC_API_KEY
+  - MODEL
+tools:
+  - check_eligibility
+  - document_checklist
+  - find_center
+  - draft_letter

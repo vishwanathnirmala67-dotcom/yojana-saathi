@@ -1,0 +1,10 @@
+services:
+  - type: web
+    name: yojana-saathi
+    runtime: docker
+    plan: free
+    envVars:
+      - key: ANTHROPIC_API_KEY
+        sync: false
+      - key: MODEL
+        value: claude-sonnet-5-5
